@@ -1,0 +1,222 @@
+html {
+    margin: 0;
+    padding: 0;
+    border-bottom: 20px solid rgb(179, 221, 253, 0.4);
+    background: url(../images/background1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.stuff {
+    width: 80%;
+    top: 0;
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 0.5em;
+}
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2em;
+    margin: 1.4em 0;
+    padding: 5px 5px;
+    color: white;
+    text-align: center;
+}
+h2 {
+    color: rgb(15, 199, 255);
+    margin: 1em 0 1em;
+    text-align: center;
+}
+h3 {
+    color: rgb(10, 58, 81);
+    font-weight: normal;
+    font-style: italic;
+    margin: 0.3em 0.7em 0.7em;
+}
+h4 {
+    color: rgb(22, 92, 124);
+    margin: 0 0 0.9em;
+    font-family: Georgia, "Times New Roman", serif;
+}
+p.content {
+    color: black;
+    font-family: serif;
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: justify;
+    margin: 0 0.8em;
+    margin-bottom: 0.45em;
+}
+img {
+    float: right;
+    margin: 30px;
+    height: auto;
+    width: 35%;
+}
+img.slides1 {
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#intro {
+    float: center;
+}
+.sectionTitle {
+    text-align: center;
+}
+.myImg {
+    float: center;
+    margin: 30px;
+    height: auto;
+    width: 35%;
+}
+#allContent {
+    height: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#aboutText {
+    background-color: rgba(217, 239, 252, 0.735);
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    text-align: center;
+}
+.aboutmeText {
+    color: rgb(6, 6, 99);
+    padding: 6px 12px;
+    font-size: 1em;
+    line-height: 1.4;
+    text-align: justify;
+    margin: 0 0.1em;
+}
+#backToTop {
+    background-color: rgba(217, 239, 252, 0.735);
+    color: rgb(6, 6, 99);
+    padding: 6px 12px;
+    font-size: 1.1em;
+    line-height: 1.4;
+    text-align: justify;
+    margin: 0 0.1em;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid rgb(142, 228, 241);
+    background-color: #ade1f0e4;
+}
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: #ade1f0e4;
+    float: left;
+    border: none;
+    outline-style: auto;
+    outline-width: 0.1em;
+    outline-color: #889ca1e4;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: rgb(109, 184, 224);
+}
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: rgb(119, 207, 221);
+}
+/* Style the tab content */
+.tabcontent {
+    background-color: rgba(217, 239, 252, 0.78);
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    text-align: center;
+}
+/* Style the close button */
+.topright {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    /*background-color: rgb(9, 10, 45);*/
+    overflow: hidden;
+    position: center;
+    top: 0;
+    width: 379px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.topnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+.topnav li {
+    float: center;
+}
+/* Style the links inside the navigation bar */
+.topnav li a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 10px 13px;
+    text-decoration: none;
+    font-size: 15px;
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: rgb(63, 19, 94);
+    color: white;
+}
+/* Add a color to the active/current link */
+.topnav a.active {
+    /*background-color: rgb(57, 167, 235);*/
+    color: white;
+}
+.topnav .icon {
+    display: none;
+} 
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}

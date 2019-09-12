@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="tabs.js"></script>
+    <link rel="stylesheet" href="otherStyles.css">
+    <title>Akino Watanabe</title>
+</head>
+<body> 
+    <noscript>Please enable JavaScript to run this.</noscript>
+    <div class="root" id="home1">
+    <div class="stuff">
+        <header class="banner">
+            <div class="topnav" id="myTopnav"> 
+                <ul>  
+                    <li>
+                        <a href="#home" class="active" class="navlinks">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="navlinks">
+                            About
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#project" class="navlinks">
+                            Projects
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#hackathon" class="navlinks">
+                            Hackathons
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#research" class="navlinks">
+                            Research
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bannerTop" style="transition: background-color 0.1s linear 0s;"> <!-- background-color:rgb(255, 255, 255);-->
+                <h1 class="bannerText" id="home">Akino Ann Watanabe</h1>
+            </div>
+        </header>
+        <div id="allContent">
+            <div id="about">
+                <h2 class="sectionTitle">ABOUT ME</h2>
+                <div id="aboutContent">
+                    <div id="aboutText">
+                        <p class="aboutmeText">
+                            I am a third-year Engineering Science student majoring in Machine Intelligence at the University of Toronto. 
+                            I am passionate about machine learning, its applications, and research development. 
+                            Particularly, I am interested in how natural language processing or audio speech recognition can be used to improve daily lives and support physically or hearing-impaired people. 
+                        </p>
+                        <p class="aboutmeText">
+                            I also love music, especially performing the Japanese zither (like a harp) and the piano. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="project">
+                <h2 class="sectionTitle">PROJECTS</h2>
+                <div class="tab">
+                    <button class="tablink" onclick="openPanel(event, 'audioSpeech')" id="defaultOpen">Audio Speech-Separation</button>
+                    <button class="tablink" onclick="openPanel(event, 'aer201')">Autonomous Ball Dispenser</button>
+                    <button class="tablink" onclick="openPanel(event, 'rocket')">Rocket</button>
+                    <button class="tablink" onclick="openPanel(event, 'bridge')">Bridge Prototype</button>
+                </div>
+                <div id="audioSpeech" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>Machine Learning Audio/Speech Separation</h3>
+                    <img src="../images/audio.png" alt="Audio Speech Separation Model">
+                    <p class="content">Audio recognition is a still-developing, important technology that has a variety of applications, such as translation, transcription, and supporting hearing-impaired people. 
+                        Speech-separation is an essential component of audio recognition technology, and it is a challenge that is still being researched. Hence, in a team of three, we aimed to create models that can separate an audio file that contains two people speaking over each other into two separate individual speeches using machine learning.
+                    </p>
+                    <p class="content">For this project, we first researched various methods and machine learning models other researchers or engineers used to improve speech-separation. 
+                        We then decided to use an existing dataset called "<a href="https://github.com/philipperemy/timit/blob/master/README.md" title="TIMIT corpus" target="_blank"><i>TIMIT corpus</i></a>". This dataset includes individual-speech audio files. 
+                        Hence, we created the train, validation, and test datasets by overlying two audio files using <i>pydub</i>. 
+                        Initially, we tried working with STFTs (short-time Fourier transform) for the audio data, but we later concluded that it will be more efficient working without the STFTs and complex audio waveforms.
+                        We then explored various model architectures and combinations, including fully connected, 1D convolution, 2D convolution, RNN, GRU, and LSTM layers. 
+                        During training, we also used various combination of different loss functions, such as Kullback-Leibler, chamfer distance, mean-squared error, and reconstruction losses. 
+                        Overall, the original audio file format and its complex nature were additional challenges to the audio separation problem, so our current best models have space for greater improvement.
+                    </p>
+                    <p class="content">Our project, with reports and audio outputs of the model, can be found <a href="https://github.com/akino11111/Audio_Speech_Separation" title="Audio-Speech Separation" target="_blank"><i>here</i></a>.</p>
+                </div>
+                <div id="aer201" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>Autonomous Ball Dispensing Machine</h3>
+                    <img src="../images/aer201.png" alt="Ball Dispensing Robot">
+                    <p class="content"> With two other teammates, I responded to a Request for Proposal (RFP) to design and create a scaled-down prototype for an autonomous ball-dispensing machine for a manufacturing company. </p>
+                    <p class="content">For this project, we first identified the objectives and requirements given.
+                        Initially, we divided the tasks into mechanical, electrical, and microcontroller coding, each person getting one division.
+                        I coded for a microcontroller and Arduino Nano to control the robot's actions and ball deployment, to implement user interface, and to incorporate I2C and UART communications protocols for Arduino. 
+                        After each division was fairly completed, we integrated all the divisions into a functioning robot and tested the robot.  
+                    </p>
+                    <p class="content">
+                        We wrote proposals and reports to document our designs, literature research, milestones, task assignment, required materials, and cost analysis. 
+                        Such was done through fomularizing design processes with PERT, Gantt, CPM, Morph, AHP, and utility function charts.
+                    </p>
+                    <p class="content">
+                        Our largest challenge was to make the robot go straight. 
+                        Because there was no line or sign for the robot to follow, we tried implementing a compass and a gyroscope.
+                        Ultimately, a gyroscope proved to be more accurate and efficient, but the accuracy could have been improved after more testing. 
+                    </p>
+                </div>
+                <div id="rocket" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>Rocket Construction and Launching</h3>
+                    <img src="../images/rocket1.jpg" alt="Rocket"> 
+                    <img src="../images/Rocket.jpg" alt="Rocket"> 
+                    <img src="../images/FlightSimulation.png" alt="Flight Simulation">
+                    <p class="content">As part of the University of Toronto Aerospace Team (UTAT), I designed and constructed a high-power rocket with apogee of around 2600-3500m.</p>
+                    <p class="content">I also studied and identified aerodynamical properties of the rocket. 
+                        Additionally, I simulated the rocket's flight using OpenRocket.
+                    </p>
+                    <p>With 15 other students, I travelled to a farm in New York, USA, to launch and recover the rockets, and got certified for High Power Level-1 by the Tripoli Rocketry Association.</p>   
+                </div>
+                <div id="bridge" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>Bridge Design and Prototype Construction</h3>
+                    <p class="content">During my first semester of the Engineering Science program, my two other teammates and I designed and created a model railway bridge using matboard and contact cement that could hold certain loads specified in the provided Request for Proposal (RFP). 
+                    We identified the problem, developed our objectives, and managed project milestones.</p>
+                    <p class="content">According to the requirements provided, we brainstormed creative design options. <img src="../images/bridgeIdea.png" alt="Diverged Ideas for the Bridge">
+                    We came up with various different designs of the bridge (diverging) as shown on the right.
+                    We then proceeded to consolidate such design options and found one design that was robustly supported by calculations, which tested how much stress and force the potential design could withstand. </p>
+                    <p class="content">Next, we created a prototype (shown on the right) for the bridge by cutting a matboard and gluing the pieces with precision derived from our calculations. 
+                    <img src="../images/bridge.png" alt="Prototype Bridge">
+                    We were, therefore, able to use both mathematical and physical models to justify our convergence towards one design because with the limited resources, it was essential for us to optimize the design and to not waste resources. 
+                    From this project, I realized how confirming the precision of mechanical work while creating the physical prototype is a necessary step towards ensuring the usability and performance of the design.</p>
+                </div>
+            </div>
+            <div id="hackathon">
+                <h2 class="sectionTitle">HACKATHONS</h2>
+                <div class="tab">
+                    <button class="tablink" onclick="openPanel(event, 'UTEK2019')">Urban Planning for Parking</button>
+                    <button class="tablink" onclick="openPanel(event, 'UtraHacks2018')">Drumming Game</button>
+                    <button class="tablink" onclick="openPanel(event, 'itnav')">Teaching at the Itnav Hackathon</button>
+                </div>
+                <div id="UTEK2019" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>Urban Planning for Parking</h3>
+                    <img src="../images/parking.jpg" alt="parking mechanism prototype">
+                    <p class="content">
+                        Efficient parking strategy is an on-going challenge for urban planning. 
+                        The University of Toronto Engineering Kompetition (UTEK) addressed this challenge.  
+                        In reponse to this, as a team of four, we designed a scaled-down prototype of a parking mechanism. 
+                        Our design consists of a circular platform with car slots slanted towards the outside. 
+                        Such design allows not only the clearly separated areas for each car to park but also the use of gravity so that the cars could easily leave/slide out from the parking lot without much effort.
+                    </p>
+                    <p class="content">
+                        As the finalists for this hackathon divion, our team presented our prototype along with the other designs we came up with and our prototype's potential applications. 
+                    </p>
+                </div>
+                <div id="UtraHacks2018" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>Electric Drumming Set</h3>
+                    <img src="../images/drum.jpg" alt="Drumming Set">
+                    <p class="content">
+                        I participated in the University of Toronto Robotics Association Hackathon (UtraHacks), which is a hardware hackathon. 
+                        There, three other members and I designed and created an electric drumming set that includes two drums and a pedalling drum.
+                        The set can be used in multiple different ways; as a gaming tool that can be found at the game centers or as a learning tool for people who want to learn how to use the drum set. 
+                    </p>
+                    <p class="content">
+                        The design detected the hits using force sensors.
+                        Additionally, we developed an LED-and-Arduino mechanism that indivates which parts of the drumming set should be hit to play a particular song or pattern. 
+                        We programmed the mechanism so that the drumming sets can be used not only as a learning tool by indicating which hit was wrong and interactively guiding which hit to do, but also as a game with various functions that includes keeping the correct hits by displaying the numbers.
+                    </p>
+                    <p class="content">
+                        We presented the drumming set and its potential applications and improvements to the judges.
+                    </p>
+                </div>
+                <div id="itnav" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>Teaching at the Itnav Hackathon</h3>
+                    <!--<img src="" alt="itnav">-->
+                    <p class="content">
+                        After Japan was hit by the earthquake in 2011, large tsunami destroyed many areas near Fukushima. 
+                        Many people strove to revive the cities and welcome back the residents and tourists. 
+                        One of such people established Itnav, which is a 
+                    </p>
+                    <p class="content">
+                        Every year, Itnav hosts an overnight three-day hackathon for people who are interested in technological development.
+                        In 2016, I participated in the hackathon as one of the teaching member for a class with mostly high school students and a few adults who were interested in developing mobile applications. 
+                        Because the class was an introductory class for coding and used CoronaSDK as the main language to code, I first quickly picked up the language, as I have never heard of the language before.
+                        After I got used to the CoronaSDK language, other teachers and I collaborated in creating an online textbook that describes various significant coding concepts and algorithms that can be used to create mobile applications.
+                    </p>
+                    <p class="content">
+                        The most memorable moment during this hackathon was helping a student to create a mobile application that supports speech-impaired people to communicate with others. 
+                        Among with the students who created various games or interfaces, including various shooting games and betting games, the student himself was physically and speech impaired and passionately wanted to support such people.
+                        Working with him and seeing his strong passion for creating and using such technology to improve others' lives inspired me to study engineering and coding.
+                    </p>
+                    <p class="content">
+                        The online textbook we created can be found <a href="" title="Itnav Coding Textbook" target="_blank"><i>here</i></a>.
+                    </p>   
+                </div>
+            </div>
+            <div id='research'>
+                <h2 class="sectionTitle">RESEARCH</h2>
+                <div class="tab">
+                    <button class="tablink" onclick="openPanel(event, 'exoPlanets')" id="defaultOpen1">Analysis on Exo-Planets</button>
+                    <button class="tablink" onclick="openPanel(event, 'educationalDemo')">Educational Engineering Demos</button>
+                    <button class="tablink" onclick="openPanel(event, 'softworm')">Soft-Worm Robot</button>
+                </div>
+                <div id="exoPlanets" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>Analysis and Predictions on the Compositions of Exo-Planets</h3>
+                    <p class="content">Since the beginning of my undergraduate life, I have been assisting research for Prof. Diana Valencia in the Department of Astronomy in the University of Toronto.</p>
+                    <p class="content">For this project, I have been programming models using <i>Python</i> to predict the compositions and habitability of exoplanets by solving systems of differential equations and equations of state along with data provided by other researchers.
+                    I use Python libraries, such as <i>NumPy, SciPy, SymPy, Plotly, Matplotlib</i>, and <i>Pandas</i> to analyze, interpolate, and present such predictions. 
+                    Additionally, I worked with melting curves (graphs) for materials that compose exo-planets, specifically identifying and interpolating when such materials change their phases. 
+                    Such work ultimately resulted in decreasing computation and research times by about 10%.</p>
+                    <p class="content">I worked on this project during summer of 2019 as well and received the Engineering Science Research Opportunity Program (ESROP) Award for funding.</p>
+                </div>
+                <div id="educationalDemo" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>Exemplifying Physics/Engineering Discoveries/Theories by Creating Educational Demos</h3>
+                    <p class="content">I worked in the Faraday Lab under Prof. Anjam Khursheed in the Department of Electrical and Computer Engineering at the National University of Singapore during the summer of 2018.</p>
+                    <p class="content">There, I first researched various theories/technologies and different methods the engineers used to arrive to innovations or inventions. 
+                    Since one of the objectives of this project was to create demos using readily available materials, I also researched and tested many materials/components that could be used to develop such technologies in the most cost effective way. 
+                    Ultimately, I developed several engineering and physics demos using mechanical skills, such as using CAD (Fusion360) to design, laser cut materials, and soldering connections and electronics based on the research I conducted. </p>
+                    <p class="content">Such demos would be used to introduce such technologies to young people to inspire them to appreciate such innovations and to demonstrate famous experiments/theories/inventions in polytechnic/university courses.
+                    For this project, I received the Engineering Science Research Opportunity Program Global Summer Experience Award for funding.</p>
+                </div>
+                <div id="softworm" class="tabcontent">
+                    <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
+                    <h3>SMA-Driven Caterpillarlike Soft-Worm Robot</h3>
+                    <img src="../images/Imomushi.jpg" alt="Soft-Worm Robot with SMA Wires">
+                    <p class="content">While I was interning in the Asami & Kawahara Laboratory at the University of Tokyo, I re-designed a soft-worm robot that enabled the removal of SMA (a shape-memory alloy, a wire that goes back to its original shape when heated) from the plastic body and created an instruction manual for the robot.</p>
+                    <p class="content">After developing an understanding of the soft-worm robot that my mentor had been working on, I made sure that I was familiar with the assigned problem and expected requirements. 
+                    I then started coming up with ideas on how to open holes that can help make the SMA lines detachable.​
+                    After deciding on one design, which was validated by my mentor, I used CAD (Fusion 360) to design the physical prototype and operated a 3D printer to print out the prototype. </p>
+                    <p class="content">I then coded and set up Arduino UNO so that the changes of the SMA lines’ shapes are "remembered."
+                    Since the purpose of this project was to communicate soft robot technology ideas to a wider audience and to create a kit that can be commercialized, I created <i><a href="https://medium.com/open-softmachines/three-sma-driven-caterpilike-recipe-3b3db9c07575" title="Instruction Manuals" target="_blank">soft-worm robot instruction manuals</a></i> in both Japanese and English.</p>    
+                </div>
+            </div>
+        </div>
+    </div>
+        <a href="#home1" id="backToTop">Back to Top</a>
+    </div>
+    <script>
+        document.getElementById("defaultOpen").click(); //tab opening at the start
+        carousel(); // slideshow of images
+    </script>
+</body>
+</html>
