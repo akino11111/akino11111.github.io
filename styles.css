@@ -61,7 +61,7 @@ img {
     width: 35%;
 }
 
-img_ball_dispensing{
+.img_ball_dispensing{
     float: left;
     margin: 5px;
     height: auto;
