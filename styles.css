@@ -62,10 +62,10 @@ img {
 }
 
 .img_ball_dispensing{
-    float: left;
+    float: right;
     margin: 5px;
+    max-width: 30%;
     height: auto;
-    width: auto;
 }
 
 img.slides1 {
