@@ -60,6 +60,14 @@ img {
     height: auto;
     width: 35%;
 }
+
+img.img_ball_dispensing{
+    float: left;
+    margin: 10px;
+    height: auto;
+    width: 35%;
+}
+
 img.slides1 {
     height: auto;
     width: 100%;

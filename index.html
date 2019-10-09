@@ -57,7 +57,7 @@
                             Particularly, I am interested in how natural language processing or audio speech recognition can be used to improve daily lives and support physically or hearing-impaired people. 
                         </p>
                         <p class="aboutmeText">
-                            I also love music, especially performing the Japanese zither (like a harp) and the piano. 
+                            I also love music, especially playing the Japanese zither (which is similar to a harp) and the piano. 
                         </p>
                     </div>
                 </div>
@@ -75,22 +75,22 @@
                     <h3>Machine Learning Audio/Speech Separation</h3>
                     <img src="../images/audio.png" alt="Audio Speech Separation Model">
                     <p class="content">Audio recognition is a still-developing, important technology that has a variety of applications, such as translation, transcription, and supporting hearing-impaired people. 
-                        Speech-separation is an essential component of audio recognition technology, and it is a challenge that is still being researched. Hence, in a team of three, we aimed to create models that can separate an audio file that contains two people speaking over each other into two separate individual speeches using machine learning.
+                        Speech-separation is an essential component of audio recognition technology, and it is a challenge that is still being researched. Hence, in a team of three, we aimed to create models that could separate an audio file that contained voices of two people speaking over each other into two separate individual speeches using machine learning.
                     </p>
                     <p class="content">For this project, we first researched various methods and machine learning models other researchers or engineers used to improve speech-separation. 
                         We then decided to use an existing dataset called "<a href="https://github.com/philipperemy/timit/blob/master/README.md" title="TIMIT corpus" target="_blank"><i>TIMIT corpus</i></a>". This dataset includes individual-speech audio files. 
-                        Hence, we created the train, validation, and test datasets by overlying two audio files using <i>pydub</i>. 
+                        Then, we created the train, validation, and test datasets by overlying two audio files using <i>pydub</i>. 
                         Initially, we tried working with STFTs (short-time Fourier transform) for the audio data, but we later concluded that it will be more efficient working without the STFTs and complex audio waveforms.
                         We then explored various model architectures and combinations, including fully connected, 1D convolution, 2D convolution, RNN, GRU, and LSTM layers. 
-                        During training, we also used various combination of different loss functions, such as Kullback-Leibler, chamfer distance, mean-squared error, and reconstruction losses. 
-                        Overall, the original audio file format and its complex nature were additional challenges to the audio separation problem, so our current best models have space for greater improvement.
+                        During training, we also used various combinations of different loss functions, such as Kullback-Leibler, chamfer distance, mean-squared error, and reconstruction losses. 
+                        Overall, the original audio file format and its complex nature were additional challenges in separating the audio, so our current best models have space for greater improvement.
                     </p>
                     <p class="content">Our project, with reports and audio outputs of the model, can be found <a href="https://github.com/akino11111/Audio_Speech_Separation" title="Audio-Speech Separation" target="_blank"><i>here</i></a>.</p>
                 </div>
                 <div id="aer201" class="tabcontent">
                     <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
                     <h3>Autonomous Ball Dispensing Machine</h3>
-                    <img src="../images/aer201.png" alt="Ball Dispensing Robot">
+                    <img class="img_ball_dispensing" src="../images/aer201.png" alt="Ball Dispensing Robot">
                     <p class="content"> With two other teammates, I responded to a Request for Proposal (RFP) to design and create a scaled-down prototype for an autonomous ball-dispensing machine for a manufacturing company. </p>
                     <p class="content">For this project, we first identified the objectives and requirements given.
                         Initially, we divided the tasks into mechanical, electrical, and microcontroller coding, each person getting one division.
@@ -113,7 +113,7 @@
                     <img src="../images/rocket1.jpg" alt="Rocket"> 
                     <img src="../images/Rocket.jpg" alt="Rocket"> 
                     <img src="../images/FlightSimulation.png" alt="Flight Simulation">
-                    <p class="content">As part of the University of Toronto Aerospace Team (UTAT), I designed and constructed a high-power rocket with apogee of around 2600-3500m.</p>
+                    <p class="content">As a member of the University of Toronto Aerospace Team (UTAT), I designed and constructed a high-power rocket with apogee of around 2600-3500m.</p>
                     <p class="content">I also studied and identified aerodynamical properties of the rocket. 
                         Additionally, I simulated the rocket's flight using OpenRocket.
                     </p>
@@ -145,11 +145,13 @@
                     <h3>Urban Planning for Parking</h3>
                     <img src="../images/parking.jpg" alt="parking mechanism prototype">
                     <p class="content">
-                        Efficient parking strategy is an on-going challenge for urban planning. 
+                        Coming up with efficient parking strategies is an on-going challenge for urban planning. 
                         The University of Toronto Engineering Kompetition (UTEK) addressed this challenge.  
-                        In reponse to this, as a team of four, we designed a scaled-down prototype of a parking mechanism. 
+                        As a team of four, we designed a scaled-down prototype of a parking mechanism. 
+                    </p>
+                    <p class="content">
                         Our design consists of a circular platform with car slots slanted towards the outside. 
-                        Such design allows not only the clearly separated areas for each car to park but also the use of gravity so that the cars could easily leave/slide out from the parking lot without much effort.
+                        Such a design creates not only the clearly separated parking spots for each car, but also the use of gravity so that the cars could easily leave/slide out from the parking lot without much effort.
                     </p>
                     <p class="content">
                         As the finalists for this hackathon divion, our team presented our prototype along with the other designs we came up with and our prototype's potential applications. 
@@ -166,7 +168,7 @@
                     </p>
                     <p class="content">
                         The design detected the hits using force sensors.
-                        Additionally, we developed an LED-and-Arduino mechanism that indivates which parts of the drumming set should be hit to play a particular song or pattern. 
+                        Additionally, we developed an LED-and-Arduino mechanism that indicates which part of the drumming set should be hit to play a particular song or pattern. 
                         We programmed the mechanism so that the drumming sets can be used not only as a learning tool by indicating which hit was wrong and interactively guiding which hit to do, but also as a game with various functions that includes keeping the correct hits by displaying the numbers.
                     </p>
                     <p class="content">
@@ -180,21 +182,23 @@
                     <p class="content">
                         After Japan was hit by the earthquake in 2011, large tsunami destroyed many areas near Fukushima. 
                         Many people strove to revive the cities and welcome back the residents and tourists. 
-                        One of such people established Itnav, which is a 
+                        One of such people established Itnav, which is an organization that combines innovation and development (Itonamu in Japanese) with the mission of educating people from Ishinomaki city, which was heavily damaged by the tsunami, to create over 1000 technologiests/engineers by 2021, which is 10 years after the Tohoku Earthquake and tsunami in 2011.
+                        Right after the earthquake and tsunami in 2011, they noticed that Ishinomaki is a rural city with fewer opportunities for children especially in the field of technology and engineering. 
+                        Hence, they hold various workshops, talk series, and teach at elementary to high schools. 
                     </p>
                     <p class="content">
-                        Every year, Itnav hosts an overnight three-day hackathon for people who are interested in technological development.
+                        Every year, Itnav also hosts an overnight three-day hackathon for people who are interested in technological development.
                         In 2016, I participated in the hackathon as one of the teaching member for a class with mostly high school students and a few adults who were interested in developing mobile applications. 
                         Because the class was an introductory class for coding and used CoronaSDK as the main language to code, I first quickly picked up the language, as I have never heard of the language before.
-                        After I got used to the CoronaSDK language, other teachers and I collaborated in creating an online textbook that describes various significant coding concepts and algorithms that can be used to create mobile applications.
+                        After I got used to the CoronaSDK language, other teachers and I collaborated in creating an online textbook that described various significant coding concepts and algorithms that could be used to create mobile applications.
                     </p>
                     <p class="content">
-                        The most memorable moment during this hackathon was helping a student to create a mobile application that supports speech-impaired people to communicate with others. 
-                        Among with the students who created various games or interfaces, including various shooting games and betting games, the student himself was physically and speech impaired and passionately wanted to support such people.
+                        The most memorable moment during this hackathon was helping a student to create a mobile application that supported speech-impaired people to communicate with others. 
+                        He himself was physically and speech impaired and passionately wanted to support such people.
                         Working with him and seeing his strong passion for creating and using such technology to improve others' lives inspired me to study engineering and coding.
                     </p>
                     <p class="content">
-                        The online textbook we created can be found <a href="" title="Itnav Coding Textbook" target="_blank"><i>here</i></a>.
+                        The online textbook we created can be found <a href="https://narumi18wa.gitbooks.io/itnavcoronasdkbootcamp/content/apiSample/" title="Itnav Coding Textbook" target="_blank"><i>here</i></a>.
                     </p>   
                 </div>
             </div>
@@ -207,22 +211,22 @@
                 </div>
                 <div id="exoPlanets" class="tabcontent">
                     <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
-                    <h3>Analysis and Predictions on the Compositions of Exo-Planets</h3>
+                    <h3>Analysis and Predictions of the Compositions of Exo-Planets</h3>
                     <p class="content">Since the beginning of my undergraduate life, I have been assisting research for Prof. Diana Valencia in the Department of Astronomy in the University of Toronto.</p>
                     <p class="content">For this project, I have been programming models using <i>Python</i> to predict the compositions and habitability of exoplanets by solving systems of differential equations and equations of state along with data provided by other researchers.
                     I use Python libraries, such as <i>NumPy, SciPy, SymPy, Plotly, Matplotlib</i>, and <i>Pandas</i> to analyze, interpolate, and present such predictions. 
                     Additionally, I worked with melting curves (graphs) for materials that compose exo-planets, specifically identifying and interpolating when such materials change their phases. 
                     Such work ultimately resulted in decreasing computation and research times by about 10%.</p>
-                    <p class="content">I worked on this project during summer of 2019 as well and received the Engineering Science Research Opportunity Program (ESROP) Award for funding.</p>
+                    <p class="content">I worked on this project during the summer of 2019 as well and received the Engineering Science Research Opportunity Program (ESROP) Award for funding.</p>
                 </div>
                 <div id="educationalDemo" class="tabcontent">
                     <span onclick="this.parentElement.style.display='none'" class="topright"><i>x</i></span> 
                     <h3>Exemplifying Physics/Engineering Discoveries/Theories by Creating Educational Demos</h3>
                     <p class="content">I worked in the Faraday Lab under Prof. Anjam Khursheed in the Department of Electrical and Computer Engineering at the National University of Singapore during the summer of 2018.</p>
-                    <p class="content">There, I first researched various theories/technologies and different methods the engineers used to arrive to innovations or inventions. 
+                    <p class="content">There, I first researched various theories/technologies and different methods the engineers used to create innovations or inventions. 
                     Since one of the objectives of this project was to create demos using readily available materials, I also researched and tested many materials/components that could be used to develop such technologies in the most cost effective way. 
                     Ultimately, I developed several engineering and physics demos using mechanical skills, such as using CAD (Fusion360) to design, laser cut materials, and soldering connections and electronics based on the research I conducted. </p>
-                    <p class="content">Such demos would be used to introduce such technologies to young people to inspire them to appreciate such innovations and to demonstrate famous experiments/theories/inventions in polytechnic/university courses.
+                    <p class="content">The demos would be used to introduce such technologies to young people to inspire them to appreciate such innovations and to demonstrate famous experiments/theories/inventions in polytechnic/university courses.
                     For this project, I received the Engineering Science Research Opportunity Program Global Summer Experience Award for funding.</p>
                 </div>
                 <div id="softworm" class="tabcontent">
