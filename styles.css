@@ -219,7 +219,7 @@ img.slides1 {
     .topnav.responsive {position: relative;}
     .topnav.responsive .icon {
         position: fixed;
-        right: 0;
+        width: 50%;
         top: 0;
     }
     .topnav.responsive a {
