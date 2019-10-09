@@ -170,7 +170,7 @@ img.slides1 {
     overflow: hidden;
     position: fixed;
     top: 0;
-    width: 379px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
