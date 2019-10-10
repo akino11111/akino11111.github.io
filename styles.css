@@ -64,8 +64,8 @@ img {
 .img_ball_dispensing{
     float: right;
     margin: 5px;
-    max-width: 30%;
-    height: auto;
+    max-width: auto;
+    height: 30%;
 }
 
 img.slides1 {
@@ -168,7 +168,7 @@ img.slides1 {
 .topnav {
     /*background-color: rgb(9, 10, 45);*/
     overflow: hidden;
-    position: fixed;
+    position: center;
     top: 0;
     width: 50%;
     margin-left: auto;
