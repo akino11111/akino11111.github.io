@@ -180,7 +180,7 @@ img.slides1 {
     padding: 0;
     overflow: hidden;
     position: -webkit-sticky;
-    position: sticky;
+    position: center;
     top: 0;
 }
 .topnav li {
